@@ -1,2 +1,2 @@
 # Credit Card Auto-Detection
-Created with StackBlitz ⚡️
+## Created with StackBlitz ⚡️
