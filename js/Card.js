@@ -10,7 +10,23 @@ export function Card(cardNumber) {
 }
 
 Card.prototype.isValid = function(){
-  return true;
+  return this.checksum() % 10 === 0;
+};
+
+Card.prototype.checksum = function(){
+  let sum = 0, x = 0, n = 0;
+  let tmp = this.number.split('').reverse();
+  
+  for(let i = 0, length = tmp.length; i < length; i++) {
+    x = parseInt(tmp[i]);
+    if(i % 2 != 0){
+      n = ((x * 2) > 9) ? (x * 2) - 9 : (x * 2);
+      sum += n;
+    }
+    else
+       sum += x;
+  } 
+  return sum;
 };
 
 Card.prototype.toString = function(n){
@@ -19,3 +35,10 @@ Card.prototype.toString = function(n){
 };
 
 
+// if(i % 2 != 0){
+//       n = ((x * 2) > 9) ? x - 9 : (x * 2);
+//       sum += n;
+//       console.log(n);
+//     }    
+//     else
+//       sum += x;
