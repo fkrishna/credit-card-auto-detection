@@ -9,8 +9,7 @@ let $provider = document.querySelector('#provider');
 
 $form.addEventListener('submit', function(){
   let cardNumber = document.querySelector('#card-number').value;
-  let card = new Card(cardNumber);
-  card.provider = App.getProvider(card);
+  let card = App.getProvider(cardNumber);
   $provider.textContent = (card.provider) ? card.provider.name : 'Invalid';
   log(card);
 });

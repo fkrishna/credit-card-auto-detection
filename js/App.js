@@ -1,6 +1,7 @@
 'use strict';
 
 import { log } from './utils';
+import { Card } from './Card';
 import { Provider } from './Provider';
 
 const PROVIDERS = [
@@ -13,10 +14,12 @@ const PROVIDERS = [
 
 export function App() { }
 
-App.getProvider = function (card) {
+App.getProvider = function (cardNumber) {
+  let card = new Card(cardNumber);
+  
   for (let provider of PROVIDERS)
     if (provider.matched(card))
-      return provider;
-  return null;
-}
+      card.provider = provider;
 
+  return card;
+}
