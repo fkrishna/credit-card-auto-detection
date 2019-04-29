@@ -5,6 +5,7 @@ import { Card } from './js/Card';
 import { Provider } from './js/Provider';
 
 let $form = document.querySelector('#form');
+let $provider = document.querySelector('#provider-name');
 
 const PROVIDERS = [
   new Provider('American Express', ['34', '37'], ['15']),
@@ -18,6 +19,7 @@ $form.addEventListener('submit', function(){
   let cardNumber = document.querySelector('#card-number').value;
   let card = new Card(cardNumber);
   card.provider = getProvider(card, PROVIDERS);
+  $provider.textContent = card.provider.name;
   log(card);
 });
 

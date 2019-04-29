@@ -1,9 +1,28 @@
 <!doctype html>
 <html>
-  <head></head>
-  <body>
-    <form id="form" autocomplete="off" onsubmit="return false;">
-      <input id="card-number" type="text">
+
+<head>
+	<title>Credit Card Auto Detection</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/css/uikit.min.css">
+</head>
+
+<body>
+	<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" uk-height-viewport>
+    <div>
+      <h2 id="provider">...</h2>
+    </div>
+    <form id="form" autocomplete="off" onsubmit="return false;" >
+      <div class="uk-margin">
+        <input id="card-number" 
+        style="width:300px"
+        class="uk-input uk-form-large uk-text-center uk-border-rounded" 
+        type="text" 
+        placeholder="Card Number">
+      </div>
     </form>
-  </body>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js"></script>
+</body>
 </html>
+
