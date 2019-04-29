@@ -6,8 +6,9 @@
 
 import * as Utils from './utils';
 
-export function Provider(name, binRanges, lengthRanges){
+export function Provider(name, logo, binRanges, lengthRanges){
   this.name = name;
+  this.logo = logo;
   this.binRanges = this.parse(binRanges);
   this.lengthRanges = this.parse(lengthRanges); 
 }
