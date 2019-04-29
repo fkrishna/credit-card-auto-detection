@@ -1,5 +1,7 @@
 'use strict';
 
+import './style.css';
+
 import { log } from './js/utils';
 import { Card } from './js/Card';
 import { App } from './js/App'
