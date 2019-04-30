@@ -16,12 +16,16 @@ const PROVIDERS = [
 
 export function App() { }
 
-App.getProvider = function (cardNumber) {
+App.getProvider = function (cardNumber, onSuccess, onError) {
   let card = new Card(cardNumber);
-  
-  for (let provider of PROVIDERS)
-    if (provider.matched(card))
-      card.provider = provider;
+  if(card.isValid()) {
+    for (let provider of PROVIDERS)
+      if (provider.matched(card))
+        card.provider = provider;
 
-  return card;
+    onSuccess(card);
+  }
+  else
+    onError();
+  
 }
