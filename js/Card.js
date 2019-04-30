@@ -33,12 +33,3 @@ Card.prototype.toString = function(n){
   n = (n !== 0 && n !== undefined) ? n : this.number.length;
   return this.number.substring(0, n); 
 };
-
-
-// if(i % 2 != 0){
-//       n = ((x * 2) > 9) ? x - 9 : (x * 2);
-//       sum += n;
-//       console.log(n);
-//     }    
-//     else
-//       sum += x;

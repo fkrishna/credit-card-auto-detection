@@ -12,9 +12,9 @@
 <body>
   <div class="uk-container uk-text-center">
     <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" uk-height-viewport>
-      
-      <div class="fs-lg active">
-        <i id="logo"></i>
+
+      <div class="fs-lg active logo uk-margin-small-bottom">
+        <i id="logo" class="pw"></i>
       </div>
       
       <form id="form" autocomplete="off" onsubmit="return false;" >
@@ -22,12 +22,12 @@
         style="width:300px;background-color:#eee;"
         class="uk-input uk-form-large uk-text-center uk-border-rounded" 
         type="text" 
-        placeholder="Card Number" autofocus>
+        placeholder="Card Number">
       </form>
       
-      <div class="uk-margin-small fs-sm muted">
+      <div class="uk-margin-small fs-sm muted" id="list-provider">
         <i class="pw pw-diners"></i>
-        <i class="pw pw-mastercard active"></i>
+        <i class="pw pw-mastercard"></i>
         <i class="pw pw-jcb"></i>
         <i class="pw pw-maestro"></i>
         <i class="pw pw-discover"></i>
